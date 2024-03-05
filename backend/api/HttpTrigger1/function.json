@@ -1,0 +1,37 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "inputDocument",
+      "direction": "in",
+      "type": "cosmosDB",
+      "methods": [],
+      "databaseName": "AzureResume",
+      "containerName": "VisitCount",
+      "connection": "myazureresume_DOCUMENTDB"
+    },
+    {
+      "name": "outputDocument",
+      "direction": "out",
+      "type": "cosmosDB",
+      "methods": [],
+      "databaseName": "AzureResume",
+      "containerName": "VisitCount",
+      "connection": "myazureresume_DOCUMENTDB2"
+    }
+  ]
+}
